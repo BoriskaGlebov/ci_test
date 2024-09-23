@@ -22,25 +22,19 @@ jobs:
           python-version: '3.11'
 
       - name: Install dependencies
-        run: |
-          pip install -r requirements.txt
+        run:  pip install -r requirements.txt
 
       - name: Run unit tests
-        run: |
-          pytest tests/
+        run: pytest tests/
 
       - name: Run MyPy type checking
-        run: |
-          mypy src/
+        run: mypy src/
 
       - name: Run Black formatting check
-        run: |
-          black --diff --check src/
+        run: black --diff --check src/
 
       - name: Run Isort check
-        run: |
-          isort --check-only src/
+        run: isort --check-only src/
 
       - name: Run Flake8 linting
-        run: |
-          flake8 src/
+        run: flake8 src/
