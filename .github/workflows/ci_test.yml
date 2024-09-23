@@ -27,7 +27,7 @@ jobs:
 
       - name: Run unit tests
         run: |
-          pytest tests
+          pytest tests/
 
       - name: Run MyPy type checking
         run: |
